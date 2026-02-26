@@ -27,3 +27,6 @@ def get_note(note_id:int):
         return {"message": "Note not found!"}
     return {"note": notes[note_id]}
 
+@app.get("/get_all_notes")
+def get_all_notes():
+    return {"notes": notes}
